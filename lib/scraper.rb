@@ -20,6 +20,22 @@ class Scraper
       student
   end
 
+  def self.brew_scraper
+    doc = Nokogiri::HTML(open("https://untappd.com"))
+    brews = []
+    # doc.css("div.result-list beer-list").each do |list|
+    #   list.css("div.content").each do |content|
+    #   name = content.css("div.name").text
+    #   abv = content.css("p.abv").text
+    #   brewery = content.css("p.brewery").text
+      binding.pry
+      # brews << {:name => name, :brewery => brewery, :abv => abv}
+    binding.pry
+    # this needs to return our array of brews!!
+        # end
+      # end
+    end
+
   def self.scrape_profile_page(profile_url)
     student_profile = Nokogiri::HTML(open(profile_url))
     profile = {}
