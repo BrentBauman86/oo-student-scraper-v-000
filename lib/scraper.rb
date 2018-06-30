@@ -7,6 +7,7 @@ class Scraper
       student_scraper = Nokogiri::HTML(open(index_url))
       student = []
       student_scraper.css("div.roster-cards-container").each do |info|
+binding.pry 
         info.css(".student-card a").each do |link|
           name = link.css(".student-name").text
           location = link.css(".student-location").text
