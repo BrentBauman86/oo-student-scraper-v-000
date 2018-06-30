@@ -34,6 +34,7 @@ class CommandLineInteface
       abv = content.css("p.abv").text
       brewery = content.css("p.brewery").text
       brews << {:name => name, :brewery => brewery, :abv => abv}
+      binding.pry
     # this needs to return our array of brews!!
         end
         # profile_url = "#{link.attr("href")}"
