@@ -23,6 +23,7 @@ class Scraper
   def self.brew_scraper
     doc = Nokogiri::HTML(open("https://untappd.com"))
     brews = []
+    binding.pry
     # doc.css("div.result-list beer-list").each do |list|
     #   list.css("div.content").each do |content|
     #   name = content.css("div.name").text
