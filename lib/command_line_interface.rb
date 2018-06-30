@@ -24,6 +24,23 @@ class CommandLineInteface
     end
   end
 
+  def self.brew_scraper
+    doc = Nokogiri::HTML(open("https://untappd.com"))
+    # binding.pry
+    brews = []
+    doc.css("div.result-list.beer-list").each do |list|
+      list.css("div.content").each do |content|
+      name = content.css("div.name").text
+      abv = content.css("p.abv").text
+      brewery = content.css("p.brewery").text
+      brews << {:name => name, :brewery => brewery, :abv => abv}
+    # this needs to return our array of brews!!
+        end
+        # profile_url = "#{link.attr("href")}"
+      end
+    end
+
+
   def display_students
     Student.all.each do |student|
       puts "#{student.name.upcase}".colorize(:blue)
