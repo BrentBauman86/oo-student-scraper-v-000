@@ -26,7 +26,7 @@ class CommandLineInteface
 
   def self.brew_scraper
     doc = Nokogiri::HTML(open("https://untappd.com"))
-    # binding.pry
+    binding.pry
     brews = []
     doc.css("div.result-list.beer-list").each do |list|
       list.css("div.content").each do |content|
