@@ -29,9 +29,9 @@ class Scraper
     #   name = content.css("div.name").text
     #   abv = content.css("p.abv").text
     #   brewery = content.css("p.brewery").text
-      binding.pry
+      # binding.pry
       # brews << {:name => name, :brewery => brewery, :abv => abv}
-    binding.pry
+    # binding.pry
     # this needs to return our array of brews!!
         # end
       # end
